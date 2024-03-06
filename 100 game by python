@@ -1,0 +1,46 @@
+# file    :Cs112_A1_T2_1_20230223
+# purpose : Two players start from 0 and alternatively add a number from 1 to 10 to the sum.The player who reaches 100 wins
+# Author  : abdallah ibrahim fathy mahmoud 
+#  ID  :20230223
+ 
+
+print("======welcome to the game======")    #The beginning of the game
+def struction_of_game():                   # See the laws of the game
+    print("")
+    print("==Two players start from 0 and alternatively add a number from 1 to 10 to the sum.The player who reaches 100 wins==")
+    print("")
+struction_of_game()
+score=0
+list=[1,2,3,4,5,6,7,8,9,10]              #Choose from these numbers only
+while True:
+    if score<100:
+        player1_input=int(input("player1 :"))
+        if player1_input in list and 100-(score+player1_input)>=0: #In order not to make the goal not exceed one hundred
+            score=score+player1_input
+            print(score)
+            l=score
+        else:
+            print("player1 , please input correct number")
+            continue
+        if score==100:         #Reach the target and stop
+            print("player1 is winner")
+            break    
+    while l<100:
+        player2_input=int(input("player2 :"))
+        if player2_input in list and 100-(score+player2_input)>=0: #In order not to make the goal not exceed one hundred
+            score=score+player2_input
+            print(score)
+            l=101
+        else:
+            print(" player2, please input correct number")
+            continue
+        if score==100: #Reach the target and stop
+            print("player2 is winner")
+            break
+
+     
+
+
+      
+
+    
